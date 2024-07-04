@@ -50,7 +50,7 @@ const Header = ({ sendArray }) => {
                     onValueChange={handleChange}
                 />
             </div>
-            <div className="flex items-center justify-between w-[250px] gap-2">
+            <div className="flex items-center justify-between w-[280px] gap-2">
                 <Button onClick={() => quickSort(array, sendArray, 50, setIsSorting)}>QuickSort</Button>
                 <Button onClick={() => mergeSort(array, sendArray, 50, setIsSorting)}>MergeSort</Button>
                 <Button onClick={() => heapSort(array, sendArray, 50, setIsSorting)}>HeapSort</Button>
