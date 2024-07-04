@@ -34,14 +34,14 @@ const Header = ({ sendArray }) => {
     }
 
     return (
-        <header className="flex m-5 py-2 px-10 border border-black rounded-md justify-between items-center">
+        <header className="flex flex-col sm:flex-row m-5 py-2 px-10 border border-black rounded-md justify-center sm:justify-between items-end overflow-auto">
             <div>
-                <h1 className="text-2xl text-center tracking-wide">
+                <h1 className="text-4xl text-center tracking-wide bg-gradient-to-r from-black to-gray-400 bg-clip-text text-transparent">
                     Column Organizer
                 </h1>
 
             </div>
-            <div className="w-[300px] h-[] p-5">
+            <div className="w-[300px] min-w-32 p-3 mt-1">
                 <Slider
                     defaultValue={[20]}
                     min={10}
@@ -50,7 +50,7 @@ const Header = ({ sendArray }) => {
                     onValueChange={handleChange}
                 />
             </div>
-            <div className="flex items-center justify-between w-[280px] gap-2">
+            <div className="flex items-center justify-between w-[280px] gap-2 mt-2">
                 <Button onClick={() => quickSort(array, sendArray, 50, setIsSorting)}>QuickSort</Button>
                 <Button onClick={() => mergeSort(array, sendArray, 50, setIsSorting)}>MergeSort</Button>
                 <Button onClick={() => heapSort(array, sendArray, 50, setIsSorting)}>HeapSort</Button>
